@@ -3,9 +3,13 @@ pipeline {
   stages {
     stage('version of python') {
       steps {
-        sh 'python --version'
+        bat 'python --version'
       }
     }
-    
-  }
+    stage ('running script') {
+      steps {
+        bat 'python L3_FrogJmp.py'
+      }
+    }
+}
 }
